@@ -1,0 +1,43 @@
+{
+  "github_username": "nu2su1tan",
+  "gpu_uuid": "GPU-a7c85ddc-c13c-6965-e794-9a89d130779f",
+  "instance_seed": 7015055604706518245,
+  "mpi_ranks": 4,
+  "process_grid": [
+    2,
+    2
+  ],
+  "global_grid": [
+    512,
+    512
+  ],
+  "steps": 400,
+  "kappa_max": 0.23999962140597547,
+  "dt_max": 3.958172542634163e-06,
+  "dt_used": 3.1665380341073303e-06,
+  "serialized_ms": 1088.3058010000007,
+  "overlapped_ms": 1385.3698220000026,
+  "serialized_cuda_event_ms": 1006.2601286172867,
+  "overlapped_cuda_event_ms": 1313.7413744926453,
+  "energy_trace_overlapped": {
+    "0": 0.11372818366485457,
+    "100": 0.1137118529902054,
+    "200": 0.11369881828579301,
+    "300": 0.1136861007830719,
+    "400": 0.11367335038747224
+  },
+  "energy_trace_serialized": {
+    "0": 0.11372818366485457,
+    "100": 0.1137118529902054,
+    "200": 0.11369881828579301,
+    "300": 0.1136861007830719,
+    "400": 0.11367335038747224
+  },
+  "parity_max_diff": 0.0,
+  "ptx_counts": {
+    "st.shared.f64": 5,
+    "ld.shared.f64": 5,
+    "bar.sync": 1
+  },
+  "ptx_audit_passed": true
+}
