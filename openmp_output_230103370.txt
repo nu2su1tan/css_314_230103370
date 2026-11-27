@@ -1,0 +1,55 @@
+Backend: omp | Logical Cores: 8 | Student: 230103370
+
+=== TASK 1 ===
+  buggy run  1: lost counts =   2727428 | max |hist - ref| = 51280
+  buggy run  2: lost counts =   2851867 | max |hist - ref| = 53533
+  buggy run  3: lost counts =   2758236 | max |hist - ref| = 51711
+  buggy run  4: lost counts =   2748149 | max |hist - ref| = 51649
+  buggy run  5: lost counts =   2747189 | max |hist - ref| = 51524
+  buggy run  6: lost counts =   2754932 | max |hist - ref| = 51769
+  buggy run  7: lost counts =   2815210 | max |hist - ref| = 52880
+  buggy run  8: lost counts =   2732925 | max |hist - ref| = 51400
+  buggy run  9: lost counts =   2735369 | max |hist - ref| = 51343
+  buggy run 10: lost counts =   2754366 | max |hist - ref| = 51623
+  total lost over 10 runs = 27625671 | worst discrepancy = 53533
+  safe_hist_omp @ 1 thr:     3.57 ms | worker_hits = [4109568]
+  safe_hist_omp @ 2 thr:     2.18 ms | worker_hits = [2054784, 2054784]
+  safe_hist_omp @ 4 thr:     1.26 ms | worker_hits = [1027392, 1027392, 1027392, 1027392]
+  safe_hist_omp @ 8 thr:     1.61 ms | worker_hits = [513696, 513696, 513696, 513696, 513696, 513696, 513696, 513696]
+  OK: safe_hist_omp is bit-identical for 1, 2, 4, 8 threads
+
+=== TASK 2 ===
+  ITERS_T2 = 39,870,000 | PAD_STRIDE = 8 int64 slots = 64 bytes
+  1 thr | unpadded   0.037 s | padded   0.037 s | speedup padded/unpadded =  1.00x
+  2 thr | unpadded   0.039 s | padded   0.039 s | speedup padded/unpadded =  1.00x
+  4 thr | unpadded   0.041 s | padded   0.041 s | speedup padded/unpadded =  0.99x
+  8 thr | unpadded   0.048 s | padded   0.048 s | speedup padded/unpadded =  0.99x
+  Speedup ratio at 8 threads (unpadded / padded) = 0.99x
+  OK: element-wise equality for all thread counts
+
+=== TASK 3 ===
+  ROWS_T3 = 15504 | SKEW_MOD = 50 | total work = 13,154,624
+  1 thr | static     69.9 ms (imb 1.0000) | balanced     69.9 ms (imb 1.0000) | max diff 0.00e+00
+  2 thr | static     35.9 ms (imb 1.0002) | balanced     35.9 ms (imb 1.0014) | max diff 0.00e+00
+  4 thr | static     18.7 ms (imb 1.0002) | balanced     18.7 ms (imb 1.0033) | max diff 0.00e+00
+  8 thr | static     16.4 ms (imb 1.0014) | balanced     16.4 ms (imb 1.0084) | max diff 0.00e+00
+  Load Imbalance @8 threads: static = 1.0014x | balanced = 1.0084x
+  ops/thread static   = [1643425, 1645665, 1644689, 1644097, 1643389, 1645065, 1644725, 1643569]
+  ops/thread balanced = [1647344, 1645412, 1646116, 1642356, 1644252, 1651608, 1639672, 1637864]
+
+=== TASK 4 ===
+  Grid 448x512 | omega = 1.750 | sweeps = 600
+  1 thr |   0.143 s | speedup  1.00x | max_delta(last) 5.148e-02 | max_abs_diff vs 1 thr 0.00e+00
+  2 thr |   0.095 s | speedup  1.50x | max_delta(last) 5.148e-02 | max_abs_diff vs 1 thr 0.00e+00
+  4 thr |   0.063 s | speedup  2.25x | max_delta(last) 5.148e-02 | max_abs_diff vs 1 thr 0.00e+00
+  8 thr |   0.091 s | speedup  1.58x | max_delta(last) 5.148e-02 | max_abs_diff vs 1 thr 0.00e+00
+
+=== OPENMP PYTHON LAB VERIFICATION BUNDLE ===
+{
+  "instructor": "Instructor - Sufyan bin Uzayr",
+  "student_name": "Nursultan Nazarbay",
+  "student_id": 230103370,
+  "omp_layer": "omp",
+  "cpu_cores": 8,
+  "verification_digest": "03620A9C2F741E08C69A"
+}
